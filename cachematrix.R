@@ -38,11 +38,11 @@ cacheSolve <- function(x, ...) {
         }
         ## If m_inv is NULL, get the matrix data
         data <- x$get()
-        ## Calculate the inverse
+        ## Calculate the inverse. It is assumed that the matrix is invertible
         m_inv <- solve(data)
         ## Store the inverse in the cache
         x$setinv(m_inv)
-        ## Return the inverse
+        ## Return the calculated inverse
         m_inv
 }
 
